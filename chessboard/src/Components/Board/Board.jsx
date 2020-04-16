@@ -1,6 +1,7 @@
 import React from 'react';
 import Square from '../Square/Square';
 import Knight from '../Knight/Knight';
+import './Board.css'
 
 function renderSquare(i, [knightX, knightY]) {
     const x = i % 8;
@@ -21,7 +22,7 @@ export default function Board({knightPosition}) {
     }
     
     return(
-        <div className="board-container">
+        <div className="board-container" >
             {squares}
         </div>
     )
