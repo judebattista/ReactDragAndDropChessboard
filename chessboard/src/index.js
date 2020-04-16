@@ -4,7 +4,7 @@ import './index.css';
 import Board from './Components/Board/Board';
 
 ReactDOM.render(
-  <Board knightPosition={[0, 0]} />,
+  <Board knightPosition={[5, 6]} />,
   document.getElementById('root'),
 );
 
