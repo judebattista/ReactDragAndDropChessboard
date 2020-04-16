@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-
+import Knight from './Components/Knight/Knight';
 
 ReactDOM.render(
-  <React.StrictMode>
-  </React.StrictMode>,
+  <Knight />,
   document.getElementById('root')
 );
 
