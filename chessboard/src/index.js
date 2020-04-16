@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Knight from './Components/Knight/Knight';
+import Board from './Components/Board/Board';
 
 ReactDOM.render(
-  <Knight />,
-  document.getElementById('root')
+  <Board knightPosition={[0, 0]} />,
+  document.getElementById('root'),
 );
 
