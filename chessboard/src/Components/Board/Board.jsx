@@ -1,18 +1,23 @@
 import React from 'react';
 import Square from '../Square/Square';
 import Knight from '../Knight/Knight';
+import  { moveKnight } from '../Game/Game';
 import './Board.css'
 
-function renderSquare(i, [knightX, knightY]) {
+function renderSquare(i, knightPosition) {
     const x = i % 8;
     const y = Math.floor(i / 8);
     const black = (x + y) % 2 === 1;
     const isKnightHere = knightX === x && knightY === y;
     const piece = isKnightHere ? <Knight /> : null;
 
-    return <div key={i} className="square-container">
+    return <div onClick={() => handleSquareClick(x,y)} className="square-container">
             <Square black={black}>{piece}</Square>
         </div>
+}
+
+function handleSquareClick(toX, toY) {
+    moveKnight(toX, toY)
 }
 
 export default function Board({knightPosition}) {
