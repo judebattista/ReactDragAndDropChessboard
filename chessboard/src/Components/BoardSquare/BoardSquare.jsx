@@ -4,7 +4,7 @@ import './BoardSquare.css';
 import { ItemTypes } from '../Constants/Constants';
 import { moveKnight, canMoveKnight } from '../Game/Game';
 import { useDrop } from 'react-dnd';
-import { Overlay } from 'react-overlay';
+import Overlay from '../Overlay/Overlay';
 
 function BoardSquare({x, y, children}) {
     const black = (x  + y) % 2 === 1;
